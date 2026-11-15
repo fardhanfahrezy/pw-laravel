@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\Mahasiswa;
+use Illuminate\Database\Seeder;
 
 class MahasiswaSeeder extends Seeder
 {
@@ -16,15 +15,21 @@ class MahasiswaSeeder extends Seeder
         Mahasiswa::query()->upsert([
             [
                 'nim' => '22030001',
-                'nama' => 'Nadia',
-                'prodi' => 'D3TI',
-                'angkatan' => '2022',
+                'nama' => 'Nadia Putri',
+                'prodi' => 'D3 Teknik Informatika',
+                'alamat' => 'Jl. Merdeka No. 10, Bandung',
             ],
             [
                 'nim' => '22030002',
-                'nama' => 'Zahra',
-                'prodi' => 'D3TI',
-                'angkatan' => '2022',
+                'nama' => 'Zahra Amelia',
+                'prodi' => 'D4 Rekayasa Perangkat Lunak',
+                'alamat' => 'Jl. Sudirman No. 45, Jakarta',
+            ],
+            [
+                'nim' => '22030003',
+                'nama' => 'Budi Santoso',
+                'prodi' => 'D3 Keperawatan',
+                'alamat' => 'Jl. Diponegoro No. 12, Surabaya',
             ],
         ], ['nim']);
     }

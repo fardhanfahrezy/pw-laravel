@@ -9,15 +9,22 @@ class Mahasiswa extends Model
 {
     use HasFactory;
 
+    /**
+     * Nama tabel database yang terhubung dengan model.
+     *
+     * @var string
+     */
     protected $table = 'mahasiswa';
-    protected $primaryKey = 'nim';
-    public $incrementing = false; // Karena primary key berupa NIM (string / non-incrementing)
-    protected $keyType = 'string';
 
+    /**
+     * Atribut yang dapat diisi secara massal (Mass Assignment).
+     *
+     * @var list<string>
+     */
     protected $fillable = [
         'nim',
         'nama',
         'prodi',
-        'angkatan',
+        'alamat',
     ];
 }
